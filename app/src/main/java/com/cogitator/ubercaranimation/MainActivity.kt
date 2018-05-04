@@ -86,15 +86,15 @@ class MainActivity : FragmentActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-        val latitude = 3.1390
-        val longitude = 101.6869
+        val latitude = 3.1343
+        val longitude = 101.6862
         mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
         mMap.isTrafficEnabled = false
         mMap.isIndoorEnabled = false
         mMap.isBuildingsEnabled = false
         mMap.uiSettings.isZoomControlsEnabled = true
         // Add a marker in Home and move the camera
-        roorkee = LatLng(3.1390, 101.6869)
+        roorkee = LatLng(latitude, longitude)
         mMap.addMarker(MarkerOptions().position(roorkee).title("Marker in Home"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(roorkee))
         mMap.moveCamera(CameraUpdateFactory.newCameraPosition(CameraPosition.Builder()
